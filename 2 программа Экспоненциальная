@@ -4,7 +4,7 @@ int main()
 {
 	setlocale(LC_ALL, "RUS");
 	int n;
-	float a, b, k1 = 0, k2 = 0, k3 = 0, k4 = 0, k5 = 0, k6 = 0, k7 = 0;
+	float a, b, k1 = 0, k2 = 0, k3 = 0, k4 = 0, k5 = 0, k6 = 0;
 	cout << "Введите кол-во" << "\n";
 	cin >> n;
 	float* x = new float[n], * y = new float[n], * x2 = new float[n], * xY = new float[n], * Y = new float[n];
@@ -22,10 +22,10 @@ int main()
 		cout << "Введите y" << i + 1 << "\n";
 		cin >> y[i];
 		k2 += y[i];
-    Y[i] = log(y[i]);
-    k3 += Y[i];
-    xY[i] = x[i]*Y[i];
-    k5 += xY[i];
+                Y[i] = log(y[i]);
+                k3 += Y[i];
+                xY[i] = x[i]*Y[i];
+                k5 += xY[i];
 	}
 	cout << "массив Х" << "\n";
 	for (int i = 0; i < n; i++)
@@ -59,8 +59,8 @@ int main()
 	cout << "y=" << a << "x+" << b << "\n";
 	for (int i = 0; i < n; i++)
 	{
-		k5 += (y[i] - (a * x[i] + b)) * (y[i] - (a * x[i] + b));
+		k6 += (y[i] - (a * x[i] + b)) * (y[i] - (a * x[i] + b));
 
-		cout << "Погрешность расчетов составляет:" << k5;
+		cout << "Погрешность расчетов составляет:" << k6;
 	}
 © 2021 GitHub, Inc.
